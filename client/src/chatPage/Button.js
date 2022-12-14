@@ -1,11 +1,11 @@
 import React from 'react';
 
 export function Button(props) {
-    //Name from useState
+    //message from useState
     const { message } = [props];
     //Onclick function
-    const joinChat = () => {
+    const postMessage = () => {
         console.log(message);
     };
-    return <button onClick={() => joinChat()}>button</button>;
+    return <button onClick={() => postMessage()}>Post message</button>;
 }
