@@ -1,12 +1,20 @@
 import { useState } from 'react';
-import { Button } from './button';
+import { Button } from './Button';
+import { UserList } from './UserList';
+import { Messages } from './Messages';
 
 export function ChatPage() {
-    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
     return (
         <>
-            <Button />
-            <input value={name} onChange={(e) => setName(e.target.value)} />
+            <UserList />
+            <Button message={message} />
+            <input
+                placeholder={'message'}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+            />
+            <Messages />
         </>
     );
 }

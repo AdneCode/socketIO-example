@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function Button(props) {
     //Name from useState
-    const {name} = [props]
+    const { name } = props;
+    //useNavigate to change the page to the chatPage
+    const navigate = useNavigate();
     //Onclick function
     const joinChat = () => {
-        console.log(name)
-    }
-  return (
-    <button onClick={() => joinChat()}>button</button>
-  )
+        console.log(name);
+        navigate('/chat');
+    };
+    return <button onClick={() => joinChat()}>Join chat</button>;
 }
