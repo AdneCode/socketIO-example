@@ -17,7 +17,7 @@ export function UserList() {
         <div>
             <h1>UserList</h1>
             {userList.map((user) => {
-                return <h3>{user.name}</h3>;
+                return <h3 key={user.name}>{user.name}</h3>;
             })}
         </div>
     );

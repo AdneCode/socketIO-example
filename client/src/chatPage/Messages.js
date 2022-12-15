@@ -21,7 +21,7 @@ export function Messages() {
             <h1>Messages</h1>
             {messages.map((message) => {
                 return (
-                    <h5>
+                    <h5 key={message.name + message.text}>
                         {message.name}: {message.text}
                     </h5>
                 );
